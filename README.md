@@ -3,6 +3,8 @@ Dedicated to keeping track on my learning in Rust lang
 
 # Setup
 
+This setup is to build directly with Cargo instead of using just Rust.
+
 ## Instalation
 For Unix:
 ```
@@ -61,6 +63,29 @@ or run the project
 ```
 cargo run
 ```
-
 Ref: [Rust in Visual Studio Code](https://code.visualstudio.com/docs/languages/rust)
 
+## Auto Format on Save
+
+make sure to add formater
+```
+cargo install rustfmt
+```
+and run on each save
+```
+cargo fmt
+```
+then add to `rust-analyzer` settings.json
+```
+"[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+}
+```
+
+
+Ref#2: [How to run cargo fmt on save in vscode?](https://stackoverflow.com/questions/67859926/how-to-run-cargo-fmt-on-save-in-vscode)
+
+# Learning Source
+
+1. [The Book : The Rust Programming Language](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html)
