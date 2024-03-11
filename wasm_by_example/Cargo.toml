@@ -1,0 +1,16 @@
+[package]
+name = "wasm_by_example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# crate-type: Specifies the type of output to be produced by the Rust compiler.
+# Here, cdylib stands for "C Dynamic Library",
+# indicating that the Rust code will be compiled into a dynamic library.
+# require src/lib.rs
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
